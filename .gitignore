@@ -1,0 +1,23 @@
+# --- Privacidad: nunca subir ---
+*PRIVADO*
+*privado*
+*.env
+.env*
+**/clave*
+*NO_ABRIR*
+# documentos de estudiantes y entregas
+*.docx
+*.doc
+*.pdf
+PROYECTO-*/
+entrada/
+entregas/
+calificacion_jueces/
+salidas/
+# --- Entorno y temporales ---
+.venv/
+venv*/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+herramientas_locales/costo_oe5_S9.json

@@ -1,0 +1,7 @@
+índice,sección,n GC / GE,Md cambio GC,Md cambio GE,U,p unilateral,p Holm,δ de Cliff,rechaza H0
+índice de elaboración (principal),Descripción del problema,16 / 20,2.4499999999999993,3.1500000000000004,156.5,0.5507,0.5507,-0.02,False
+índice de elaboración (principal),Justificación,16 / 20,-1.3500000000000005,3.0999999999999996,230.0,0.0134,0.0268,0.44,True
+índice de elaboración (principal),DECISIÓN,se acepta de forma parcial,,,,,,,
+índice estructural,Descripción del problema,16 / 20,0.0,0.0,149.5,0.645,0.645,-0.07,False
+índice estructural,Justificación,16 / 20,0.0,0.0,200.0,0.0947,0.1894,0.25,False
+índice estructural,DECISIÓN,no se acepta Hi,,,,,,,

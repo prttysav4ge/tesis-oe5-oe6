@@ -1,0 +1,9 @@
+TEXTO FICTICIO, redactado para la demostración. No corresponde a ningún proyecto del estudio.
+
+En las pequeñas empresas de panificación de la ciudad, el control del inventario de insumos se realiza de forma manual en cuadernos. Esta situación genera pérdidas económicas y paradas de producción que afectan la continuidad de los negocios.
+
+Según un reporte gremial de 2025, el 38 % de las panaderías encuestadas desechó más de 10 kg de harina al mes por vencimiento. Además, el 52 % declaró haber suspendido la producción al menos una vez por falta de insumos. Estas cifras indican que el registro manual no permite anticipar ni el vencimiento ni el desabastecimiento, porque la información de existencias no está disponible cuando se decide la compra.
+
+De acuerdo con el modelo de revisión periódica de inventarios, una decisión de reposición requiere conocer las existencias y el consumo de cada periodo. Podría argumentarse que el cuaderno contiene esa información; sin embargo, no la resume ni la actualiza al ritmo del consumo diario.
+
+El problema se delimita a las panaderías con menos de diez trabajadores del distrito central, entre enero y junio de 2026.

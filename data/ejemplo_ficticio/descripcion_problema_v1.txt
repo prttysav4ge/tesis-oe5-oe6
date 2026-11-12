@@ -1,0 +1,7 @@
+TEXTO FICTICIO, redactado para la demostración. No corresponde a ningún proyecto del estudio.
+
+En las pequeñas empresas de panificación de la ciudad, el control del inventario de insumos se realiza de forma manual en cuadernos. Esta situación genera pérdidas importantes para los negocios.
+
+Según un reporte gremial de 2025, el 38 % de las panaderías encuestadas desechó más de 10 kg de harina al mes por vencimiento. Además, el 52 % declaró haber suspendido la producción al menos una vez por falta de insumos.
+
+Por ello, es necesario desarrollar un sistema que permita registrar los insumos.

@@ -1,0 +1,97 @@
+apartado,cifra,valor_informe,valor_recalculado,coincide,explicacion
+6.5.1,Descripciones del problema completas en S4,33,33,True,
+6.5.1,Justificaciones completas en S4,25,25,True,
+6.5.1,"Afirmaciones por sección, DP S4 (Md)",5,5,True,
+6.5.1,"% afirmaciones con dato, DP S4",70.4,70.4,True,
+6.5.1,"% afirmaciones con garantia, DP S4",6.5,6.5,True,
+6.5.1,"% afirmaciones con respaldo, DP S4",2.2,2.2,True,
+6.5.1,"% afirmaciones con calificador, DP S4",5.4,5.4,True,
+6.5.1,"% afirmaciones con refutacion, DP S4",0.5,0.5,True,
+6.5.1,"% afirmaciones con dato, JU S4",66.2,66.2,True,
+6.5.1,"% afirmaciones con garantía, JU S4",5.5,5.5,True,
+6.5.1,"Secciones con garantía, DP S4",10,10,True,
+6.5.1,"Secciones con garantía, JU S4",6,6,True,
+6.5.1,"% vínculos entre párrafos, DP S4",57.3,57.3,True,
+6.5.1,"% vínculos con lema compartido, DP S4",67.9,67.9,True,
+6.5.1,DP S4 en el nivel 2 de Erduran,32,32,True,
+6.5.1,"% con dato / garantía, DP S7",81.2 / 7.6,81.2 / 7.6,True,
+6.5.1,"% con dato / garantía, JU S7",74.5 / 4.5,74.5 / 4.5,True,
+Tabla 29,"DP S4 GC: Md afirm., %dato, %garantía, %respaldo, %calificador, %refutación, secc. con garantía, Md elaboración, Md estructural, Md v1.1",6 | 70.8 | 5.6 | 1.1 | 7.9 | 0.0 | 3 | 18.4 | 41.6 | 33.3,6 | 70.8 | 5.6 | 1.1 | 7.9 | 0.0 | 3 | 18.4 | 41.6 | 33.3,True,Mediana 5.5 / 10.5 / 7.5 redondeada al par más cercano.
+Tabla 29,"DP S4 GE: Md afirm., %dato, %garantía, %respaldo, %calificador, %refutación, secc. con garantía, Md elaboración, Md estructural, Md v1.1",5 | 70.1 | 7.2 | 3.1 | 3.1 | 1.0 | 7 | 16.7 | 50.0 | 33.3,5 | 70.1 | 7.2 | 3.1 | 3.1 | 1.0 | 7 | 16.7 | 50.0 | 33.3,True,
+Tabla 29,"DP S7 GC: Md afirm., %dato, %garantía, %respaldo, %calificador, %refutación, secc. con garantía, Md elaboración, Md estructural, Md v1.1",5 | 81.2 | 6.9 | 3.0 | 1.0 | 1.0 | 6 | 20.0 | 50.0 | 33.3,5 | 81.2 | 6.9 | 3.0 | 1.0 | 1.0 | 6 | 20.0 | 50.0 | 33.3,True,
+Tabla 29,"DP S7 GE: Md afirm., %dato, %garantía, %respaldo, %calificador, %refutación, secc. con garantía, Md elaboración, Md estructural, Md v1.1",7 | 81.2 | 8.1 | 2.7 | 2.0 | 0.7 | 11 | 20.0 | 50.0 | 50.0,7 | 81.2 | 8.1 | 2.7 | 2.0 | 0.7 | 11 | 20.0 | 50.0 | 50.0,True,
+Tabla 29,"JU S4 GC: Md afirm., %dato, %garantía, %respaldo, %calificador, %refutación, secc. con garantía, Md elaboración, Md estructural, Md v1.1",7 | 71.6 | 5.2 | 1.7 | 2.6 | 4.3 | 3 | 15.2 | 41.6 | 41.6,7 | 71.6 | 5.2 | 1.7 | 2.6 | 4.3 | 3 | 15.2 | 41.6 | 41.6,True,
+Tabla 29,"JU S4 GE: Md afirm., %dato, %garantía, %respaldo, %calificador, %refutación, secc. con garantía, Md elaboración, Md estructural, Md v1.1",7 | 58.8 | 5.9 | 0.0 | 1.2 | 0.0 | 3 | 10.0 | 33.3 | 33.3,7 | 58.8 | 5.9 | 0.0 | 1.2 | 0.0 | 3 | 10.0 | 33.3 | 33.3,True,
+Tabla 29,"JU S7 GC: Md afirm., %dato, %garantía, %respaldo, %calificador, %refutación, secc. con garantía, Md elaboración, Md estructural, Md v1.1",10 | 69.5 | 2.3 | 0.9 | 0.9 | 1.9 | 4 | 15.3 | 33.3 | 50.0,10 | 69.5 | 2.3 | 0.9 | 0.9 | 1.9 | 4 | 15.3 | 33.3 | 50.0,True,Mediana 5.5 / 10.5 / 7.5 redondeada al par más cercano.
+Tabla 29,"JU S7 GE: Md afirm., %dato, %garantía, %respaldo, %calificador, %refutación, secc. con garantía, Md elaboración, Md estructural, Md v1.1",8 | 80.8 | 7.2 | 3.0 | 2.4 | 1.8 | 8 | 20.0 | 41.6 | 33.3,8 | 80.8 | 7.2 | 3.0 | 2.4 | 1.8 | 8 | 20.0 | 41.6 | 33.3,True,Mediana 5.5 / 10.5 / 7.5 redondeada al par más cercano.
+6.5.1,Valores distintos: estructural 2.0 / v1.1 / elaboración (DP),4 / 3 / 40,4 / 3 / 40,True,
+6.5.1,% secciones con 33.3 %: v1.1 → 2.0,54.3 → 36.2,54.3 → 36.2,True,
+6.5.1,Estructural 2.0 frente a 1.1: mayor / igual / menor (de 138),46 / 75 / 17,46 / 74 / 18,False,Igual que el anterior: el resumen vigente (resumen_OE5_v2.json) da 74 y 18.
+6.5.2,"Md elaboración Descripción del problema, S4 → S7",16.7 → 20.0,16.7 → 20.0,True,
+6.5.2,"Md elaboración Justificación, S4 → S7",15.0 → 18.0,15.0 → 18.0,True,
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema Total S4_S5 (aumentos/disminuciones p),15/10 .124,16/9 .069,False,"No reproducible con los datos vigentes; ningún archivo de salida conserva el valor del informe. Probablemente se copió de una corrida anterior a la versión 1.1 de la división, que cambió la descripción del problema de un proyecto del GC en S5 y S6. No afecta a la HE5."
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema Total S5_S6 (aumentos/disminuciones p),14/10 .269,15/10 .242,False,"No reproducible con los datos vigentes; ningún archivo de salida conserva el valor del informe. Probablemente se copió de una corrida anterior a la versión 1.1 de la división, que cambió la descripción del problema de un proyecto del GC en S5 y S6. No afecta a la HE5."
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema Total S6_S7 (aumentos/disminuciones p),11/14 .611,10/15 .794,False,"No reproducible con los datos vigentes; ningún archivo de salida conserva el valor del informe. Probablemente se copió de una corrida anterior a la versión 1.1 de la división, que cambió la descripción del problema de un proyecto del GC en S5 y S6. No afecta a la HE5."
+6.5.2 / Tabla 30,Wilcoxon Justificación Total S4_S5 (aumentos/disminuciones p),13/5 .037,13/5 .037,True,
+6.5.2 / Tabla 30,Wilcoxon Justificación Total S5_S6 (aumentos/disminuciones p),12/8 .081,12/8 .081,True,
+6.5.2 / Tabla 30,Wilcoxon Justificación Total S6_S7 (aumentos/disminuciones p),9/19 .763,9/19 .763,True,
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema GC S4_S5 (aumentos/disminuciones p),.328,.212,False,"No reproducible con los datos vigentes; ningún archivo de salida conserva el valor del informe. Probablemente se copió de una corrida anterior a la versión 1.1 de la división, que cambió la descripción del problema de un proyecto del GC en S5 y S6. No afecta a la HE5."
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema GC S5_S6 (aumentos/disminuciones p),.249,.172,False,"No reproducible con los datos vigentes; ningún archivo de salida conserva el valor del informe. Probablemente se copió de una corrida anterior a la versión 1.1 de la división, que cambió la descripción del problema de un proyecto del GC en S5 y S6. No afecta a la HE5."
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema GC S6_S7 (aumentos/disminuciones p),.518,.748,False,"No reproducible con los datos vigentes; ningún archivo de salida conserva el valor del informe. Probablemente se copió de una corrida anterior a la versión 1.1 de la división, que cambió la descripción del problema de un proyecto del GC en S5 y S6. No afecta a la HE5."
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema GE S4_S5 (aumentos/disminuciones p),.136,.136,True,
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema GE S5_S6 (aumentos/disminuciones p),.351,.351,True,
+6.5.2 / Tabla 30,Wilcoxon Descripción del problema GE S6_S7 (aumentos/disminuciones p),.703,.703,True,
+6.5.2 / Tabla 30,Wilcoxon Justificación GC S4_S5 (aumentos/disminuciones p),.444,.444,True,
+6.5.2 / Tabla 30,Wilcoxon Justificación GC S5_S6 (aumentos/disminuciones p),.500,.500,True,
+6.5.2 / Tabla 30,Wilcoxon Justificación GC S6_S7 (aumentos/disminuciones p),.876,.876,True,
+6.5.2 / Tabla 30,Wilcoxon Justificación GE S4_S5 (aumentos/disminuciones p),.005,.005,True,
+6.5.2 / Tabla 30,Wilcoxon Justificación GE S5_S6 (aumentos/disminuciones p),.078,.078,True,
+6.5.2 / Tabla 30,Wilcoxon Justificación GE S6_S7 (aumentos/disminuciones p),.377,.377,True,
+Tabla 30,Md elaboración Descripción del problema S4 GC / GE / Total,18.4 / 16.7 / 16.7,18.4 / 16.7 / 16.7,True,
+Tabla 30,Md elaboración Descripción del problema S5 GC / GE / Total,20.0 / 20.0 / 20.0,20.0 / 20.0 / 20.0,True,
+Tabla 30,Md elaboración Descripción del problema S6 GC / GE / Total,20.0 / 20.0 / 20.0,20.0 / 20.0 / 20.0,True,
+Tabla 30,Md elaboración Descripción del problema S7 GC / GE / Total,20.0 / 20.0 / 20.0,20.0 / 20.0 / 20.0,True,
+Tabla 30,Md elaboración Justificación S4 GC / GE / Total,15.2 / 10.0 / 15.0,15.2 / 10.0 / 15.0,True,
+Tabla 30,Md elaboración Justificación S5 GC / GE / Total,17.3 / 19.3 / 18.6,17.3 / 19.3 / 18.6,True,
+Tabla 30,Md elaboración Justificación S6 GC / GE / Total,18.0 / 20.0 / 20.0,18.0 / 20.0 / 20.0,True,
+Tabla 30,Md elaboración Justificación S7 GC / GE / Total,15.3 / 20.0 / 18.0,15.3 / 20.0 / 18.0,True,
+6.5.2,HE5 DP: Md cambio GE / GC; U; p,3.1 / 2.5; U = 156.5; p = .551,3.2 / 2.5; U = 156.5; p = .551,False,"Md GE = 3.15 y Md GC = 2.45: el informe redondea 3.15 hacia abajo y 2.45 hacia arriba. Diferencia de redondeo: el script original redondeaba antes de resumir (la TL de cada proyecto a un decimal antes de la mediana, o el IC a tres decimales antes de dos). U y p no cambian."
+6.5.2,HE5 JU: U; p; δ,U = 230.0; p = .013; δ = .44,U = 230.0; p = .013; δ = .44,True,El párrafo del v15 está dañado («pn = 20 y 16»): falta la frase de la justificación (Md 3.1 frente a -1.4).
+6.5.4,p ajustado por Holm DP / JU (elaboración),.551 / .027,.551 / .027,True,
+6.5.4,p estructural DP / JU; ajustados,.645 / .095; .645 / .189,.645 / .095; .645 / .189,True,
+6.5.4,Decisión HE5,se acepta de forma parcial,se acepta de forma parcial,True,
+6.5.3,Spearman elaboración-calidad Descripción del problema S4 (ρ p n),.04 .847 33,.03 .847 33,False,"ρ = .035: Diferencia de redondeo: el script original redondeaba antes de resumir (la TL de cada proyecto a un decimal antes de la mediana, o el IC a tres decimales antes de dos). U y p no cambian."
+6.5.3,Spearman elaboración-calidad Descripción del problema S7 (ρ p n),.05 .762 36,.05 .762 36,True,
+6.5.3,Spearman elaboración-calidad Justificación S4 (ρ p n),.02 .933 25,.02 .933 25,True,
+6.5.3,Spearman elaboración-calidad Justificación S7 (ρ p n),.22 .206 36,.22 .206 36,True,
+5.6.7,Retest: secciones / unidades,58 / 1 215,58 / 1 215,True,
+5.6.7,Retest: % funciones iguales / % vínculos iguales,80.6 / 65.4,80.6 / 65.4,True,
+5.6.7,"CCI(2,1) elaboración / estructural",.77 / .77,.77 / .77,True,
+Tabla 31,"S4_S5 GC: nominales, observaciones, levantadas, TL, retrocesos, TR",1 276 91 33.0 23 4.5,1 276 91 33.0 23 4.5,True,
+Tabla 31,"S4_S5 GE: nominales, observaciones, levantadas, TL, retrocesos, TR",3 238 64 26.9 26 5.3,3 238 64 26.9 26 5.3,True,
+Tabla 31,"S5_S6 GC: nominales, observaciones, levantadas, TL, retrocesos, TR",11 276 12 4.3 7 1.0,11 276 12 4.3 7 1.0,True,
+Tabla 31,"S5_S6 GE: nominales, observaciones, levantadas, TL, retrocesos, TR",0 256 92 35.9 49 7.2,0 256 92 35.9 49 7.2,True,
+Tabla 31,"S6_S7 GC: nominales, observaciones, levantadas, TL, retrocesos, TR",1 290 89 30.7 51 7.5,1 290 89 30.7 51 7.5,True,
+Tabla 31,"S6_S7 GE: nominales, observaciones, levantadas, TL, retrocesos, TR",3 318 100 31.4 34 3.1,3 318 100 31.4 34 3.1,True,
+Tabla 31,"S7_S9 GC: nominales, observaciones, levantadas, TL, retrocesos, TR",1 288 57 19.8 39 4.9,1 288 57 19.8 39 4.9,True,
+Tabla 31,"S7_S9 GE: nominales, observaciones, levantadas, TL, retrocesos, TR",2 260 72 27.7 53 4.3,2 260 72 27.7 53 4.3,True,
+Tabla 31,"Total GC: nominales, observaciones, levantadas, TL, retrocesos, TR",14 1 130 249 22.0 120 4.5,14 1 130 249 22.0 120 4.5,True,
+Tabla 31,"Total GE: nominales, observaciones, levantadas, TL, retrocesos, TR",8 1 072 328 30.6 162 4.6,8 1 072 328 30.6 162 4.6,True,
+6.6.1,Observaciones acumuladas,2 202,2 202,True,
+Tabla 31 (nota),"p de Holm por intervalo S4-S5, S5-S6, S6-S7, S7-S9","1.000, < .001, 1.000, 1.000","1.000, < .001, 1.000, 1.000",True,
+6.6.2,Levantadas: total = sustantiva + superficial + sin cambio,577 = 519 + 14 + 43 (suman 576),577 = 520 + 14 + 43,False,"Faltaba 1 corrección: estaba en una dimensión sin texto dividido porque la versión anterior de ese proyecto fue «sin avance» y se comparó con el PDF descargado, no con el texto calificado. Corregido: la versión anterior es la última entrega calificada; la corrección es sustantiva."
+6.6.2,% levantadas con revisión sustantiva / sin cambio,89.9 / 7.5,90.1 / 7.5,False,"Cambia por la misma corrección del caso «sin avance» (1 proyecto, 1 intervalo)."
+Tabla 32,"sin_cambio: dimensiones, observaciones, TL, cumplidos, TR",319 515 8.3 1 304 2.7,319 515 8.3 1 304 2.7,True,
+Tabla 32,"superficial: dimensiones, observaciones, TL, cumplidos, TR",48 79 17.7 214 3.3,48 79 17.7 214 3.3,True,
+Tabla 32,"sustantiva: dimensiones, observaciones, TL, cumplidos, TR",720 1 275 40.7 3 611 6.5,721 1 276 40.8 3 615 6.4,False,"Cambia por la misma corrección del caso «sin avance» (1 proyecto, 1 intervalo)."
+6.6.2,TL sin cambio de texto GC / GE,7.9 / 8.9,7.9 / 8.9,True,
+6.6.2,TL por dimensión: descripción del problema (GE / GC),44.3 de 174 / 13.0 de 208,44.3 de 174 / 13.0 de 208,True,
+6.6.2,TL por dimensión: marco teórico (GE / GC),57.8 / 36.0,57.8 / 36.0,True,
+6.6.2,TL por dimensión: hipótesis (GE / GC),45.5 / 10.0,45.5 / 10.0,True,
+6.6.2,TL por dimensión: variables (GE / GC),58.1 / 25.0,58.1 / 25.0,True,
+6.6.2,TL por dimensión: formulación (GE / GC),36.7 de 30 / 22.7 de 97,36.7 de 30 / 22.7 de 97,True,
+6.6.3 / Tabla 33,TL acumulada: Md (M) GC; Md (M) GE; U; p; δ,20.9 (22.8); 32.3 (32.1); 249.5; .002; +0.56,20.9 (22.8); 32.3 (32.1); 249.5; .002; +0.56,True,
+6.6.3 / Tabla 33,TL con revisión sustantiva: Md (M) GC; Md (M) GE; U; p; δ,17.5 (20.5); 31.5 (29.4); 243.0; .004; +0.52,17.5 (20.6); 31.5 (29.5); 243.0; .004; +0.52,False,"Cambia por la misma corrección del caso «sin avance» (1 proyecto, 1 intervalo). Diferencia de redondeo: el script original redondeaba antes de resumir (la TL de cada proyecto a un decimal antes de la mediana, o el IC a tres decimales antes de dos). U y p no cambian."
+6.6.3 / Tabla 33,TL sin entregas nominales: Md (M) GC; Md (M) GE; U; p; δ,27.6 (28.6); 33.8 (34.9); 215.5; .040; +0.35,27.7 (28.6); 33.8 (34.9); 215.5; .040; +0.35,False,"Diferencia de redondeo: el script original redondeaba antes de resumir (la TL de cada proyecto a un decimal antes de la mediana, o el IC a tres decimales antes de dos). U y p no cambian."
+6.6.3 / Tabla 33,GEE: OR [IC 95 %]; p,1.45 [1.05; 1.99]; .011,1.45 [1.05; 1.98]; .011,False,"Límite superior 1.9846: Diferencia de redondeo: el script original redondeaba antes de resumir (la TL de cada proyecto a un decimal antes de la mediana, o el IC a tres decimales antes de dos). U y p no cambian."
+6.6.3 / Tabla 33,TR acumulada: Md GC; Md GE; U; p bilateral,5.0; 4.9; 155.0; .886,5.1; 4.9; 155.0; .886,False,"Diferencia de redondeo: el script original redondeaba antes de resumir (la TL de cada proyecto a un decimal antes de la mediana, o el IC a tres decimales antes de dos). U y p no cambian."
