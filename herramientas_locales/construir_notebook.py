@@ -37,7 +37,9 @@ informe.
 pasa a «cumple» en la entrega siguiente. **El OE6 mide (a) → (c)**, no (b).
 
 Proyectos: P01–P36 (16 GC y 20 GE), identificadores anónimos. Mediciones: semanas 4, 5, 6, 7 y 9.
-Ejecutar con *Entorno de ejecución → Ejecutar todas*. La última sección es opcional y es la única que usa la API.
+**Cómo ejecutarlo:** la carpeta `tesis-oe5-oe6` completa debe estar en Google Drive (por ejemplo, en la carpeta
+compartida). Use *Entorno de ejecución → Ejecutar todas* y, cuando Colab lo pida, autorice el acceso a Google Drive.
+La última sección es opcional y es la única que usa la API.
 """)
 
 md("## 1. Preparación")
@@ -46,8 +48,22 @@ import os, sys, subprocess
 REPO_GITHUB = "{REPO_GITHUB}"
 EN_COLAB = "google.colab" in sys.modules
 if EN_COLAB and not os.path.exists("tesis-oe5-oe6"):
-    # Repositorio privado: un token de GitHub de solo lectura, guardado en los Secretos de Colab
-    # (icono de la llave, nombre GITHUB_TOKEN) o escrito al ejecutar. Nunca se escribe en el código.
+    # Opción A (recomendada): la carpeta tesis-oe5-oe6 completa está en Google Drive (por ejemplo, en una carpeta
+    # compartida). Se monta Drive y se busca la carpeta; no hace falta GitHub.
+    import glob
+    from google.colab import drive
+    drive.mount("/content/drive")
+    candidatas = [c for patron in ("/content/drive/MyDrive/tesis-oe5-oe6", "/content/drive/MyDrive/*/tesis-oe5-oe6",
+                                   "/content/drive/MyDrive/*/*/tesis-oe5-oe6", "/content/drive/Shareddrives/*/tesis-oe5-oe6",
+                                   "/content/drive/Shareddrives/*/*/tesis-oe5-oe6")
+                  for c in glob.glob(patron) if os.path.exists(os.path.join(c, "src", "oe6.py"))]
+    if candidatas:
+        print("Carpeta encontrada en Drive:", candidatas[0])
+        os.symlink(candidatas[0], "tesis-oe5-oe6")
+if EN_COLAB and not os.path.exists("tesis-oe5-oe6"):
+    # Opción B: clonar el repositorio privado de GitHub con un token de solo lectura, guardado en los Secretos de
+    # Colab (icono de la llave, nombre GITHUB_TOKEN) o escrito al ejecutar. Nunca se escribe en el código.
+    print("No se encontró la carpeta tesis-oe5-oe6 en Drive; se clona desde GitHub.")
     try:
         from google.colab import userdata
         token = userdata.get("GITHUB_TOKEN")
@@ -96,7 +112,87 @@ vuelve a llamar al modelo (la sección 6 muestra una llamada sobre un texto de e
 
 **HE5**: U de Mann-Whitney unilateral (GE > GC) del cambio del índice de elaboración entre la primera y la última
 medición con la sección completa, con corrección de Holm para las dos secciones.
+
+### 3.1 La métrica de Toulmin
+
+El modelo identifica en cada sección las **afirmaciones** (tesis que el estudiante sostiene) y, para cada una, sus
+cinco apoyos posibles: **dato**, **garantía**, **respaldo**, **calificador** y **refutación**. Con eso se calculan:
+
+| Indicador | Fórmula | Rango |
+|---|---|---|
+| **Índice de elaboración** (principal) | promedio, sobre las afirmaciones, de (apoyos que tiene la afirmación ÷ 5) × 100 | 0–100 |
+| Índice estructural | (componentes presentes en la sección, de los 6) ÷ 6 × 100 | 0–100 |
+| Nivel (Erduran) | 0 sin afirmación; 1 solo afirmaciones; 2 con fundamento; 3 con refutación; 4–5 refutación respondida | 0–5 |
+
+`afirm_con_<apoyo>` es la proporción de afirmaciones que tienen ese apoyo; por eso el índice de elaboración es
+también el promedio de esas cinco proporciones, como comprueba la celda siguiente.
 """)
+code("""
+s = pd.read_csv("data/oe5_secciones.csv")
+apoyos = ["dato", "garantia", "respaldo", "calificador", "refutacion"]
+s["elaboracion_recalculada"] = (100 * s[[f"afirm_con_{a}" for a in apoyos]].mean(axis=1)).round(1)
+print("Diferencia máxima entre el índice guardado y el recalculado con la fórmula (solo redondeo a un decimal):",
+      (s.indice_elaboracion - s.elaboracion_recalculada).abs().max().round(2))
+cols = ["semana", "proyecto", "grupo", "seccion", "afirmaciones"] + [f"afirm_con_{a}" for a in apoyos] + \\
+       ["indice_elaboracion", "indice_estructural", "nivel"]
+print("Métrica de Toulmin por proyecto, sección (S02 = descripción del problema, S05 = justificación) y semana")
+display(s[cols].sort_values(["seccion", "proyecto", "semana"]).reset_index(drop=True))
+""")
+md("""
+### 3.2 Cómo se obtuvo: el código
+
+Por cada proyecto, sección (descripción del problema y justificación) y semana se siguieron cuatro pasos:
+
+1. **Dividir** la sección en unidades numeradas `[P2-U3]` (párrafo 2, oración 3).
+2. **Una llamada a GPT-4.1** (temperatura 0, semilla 42) con el prompt `src/prompts/argumentacion_toulmin_v2.md`: el
+   modelo devuelve, en un formato fijo, las afirmaciones del autor y, para cada una, qué unidades son su dato,
+   garantía, respaldo o refutación.
+3. **Verificar** la respuesta con reglas fijas, sin IA (función `verificar`): los ids deben existir, una unidad no
+   puede apoyarse a sí misma, una garantía debe conectar un dato válido de la misma afirmación, etc. El
+   **calificador** no lo decide el modelo: se detecta con el diccionario de atenuadores del evaluador
+   («probablemente», «en general», «podría»…).
+4. **Puntuar** (función `puntuar`): índice de elaboración, índice estructural y nivel.
+
+El código está en `src/toulmin_demo.py`, con el mismo prompt, la misma verificación y la misma puntuación que el
+estudio. Solo cambia la división en unidades: el estudio usa la geometría del PDF y spaCy. Las celdas siguientes
+muestran el prompt y el código de los pasos 3 y 4.
+""")
+code("""
+import inspect
+from src import toulmin_demo as td
+print(td.PROMPT[:3000], "\\n[...]")
+""")
+code("""
+print(inspect.getsource(td.verificar))
+print(inspect.getsource(td.puntuar))
+""")
+md("""
+**Ejemplo paso a paso, sin API.** Se aplica sobre el texto ficticio de `data/ejemplo_ficticio/`. La respuesta del
+modelo está **escrita a mano como ilustración** y tiene el mismo formato que devuelve GPT-4.1. La sección 6.2
+permite obtener la respuesta real con una llamada.
+""")
+code("""
+texto = open("data/ejemplo_ficticio/descripcion_problema_v2.txt", encoding="utf-8").read().split("\\n", 2)[2]
+unidades = td.dividir(texto)                                    # paso 1
+for u in unidades: print(f"[{u['id']}] {u['texto']}")
+
+respuesta_ilustrativa = {"afirmaciones": [                      # paso 2 (formato de la respuesta de GPT-4.1)
+    {"afirmacion": "P1-U2", "central": True, "datos": ["P2-U1", "P2-U2"],
+     "garantias": [{"unidad": "P2-U3", "dato": "P2-U1"}],
+     "respaldos": [{"unidad": "P3-U1", "garantia": "P2-U3"}],
+     "refutaciones": [{"unidad": "P3-U2", "responde_en": None}]},
+    {"afirmacion": "P1-U1", "central": False, "datos": [], "garantias": [], "respaldos": [], "refutaciones": []}]}
+
+ver = td.verificar(respuesta_ilustrativa, unidades)             # paso 3
+for a in ver["argumentos"]:
+    print(f"\\nAfirmación {a['afirmacion']}: apoyos =", a["apoyos"],
+          f"-> {sum(a['apoyos'].values())} de 5 = {100 * sum(a['apoyos'].values()) / 5:.0f} %")
+r = td.puntuar(ver)                                              # paso 4
+print(f"\\nÍndice de elaboración = promedio de las afirmaciones = {r['indice_elaboracion']:.1f}")
+print(f"Índice estructural = {len(r['presentes'])} de 6 componentes presentes = {r['indice_estructural']:.1f}")
+print("Nivel (Erduran):", r["nivel_erduran"])
+""")
+md("### 3.3 Tablas del informe")
 code("""
 print("Tabla 29 del informe: perfil de componentes, S4 y S7")
 display(T["oe5_tabla29_S4_S7"])
