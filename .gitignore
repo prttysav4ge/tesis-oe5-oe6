@@ -21,3 +21,5 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 herramientas_locales/costo_oe5_S9.json
+chats*/
+*observaciones.csv.bak

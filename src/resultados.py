@@ -107,4 +107,12 @@ def generar_todo() -> dict:
     T["uso_y_correccion"] = guardar("uso_mentoria_y_correccion.csv", ex["resumen"].reset_index())
     T["uso_y_correccion_spearman"] = ex["spearman"]
     figuras.uso_por_semana(u)
+    ob = uso_mentoria.cargar_observaciones()
+    T["obs_por_intervalo"] = guardar("mentoria_observaciones_por_intervalo.csv", uso_mentoria.descriptivo_observaciones(ob))
+    for etiqueta, sub in (("", ob), ("_sin_antes_S4", ob[ob.antes_de_S4 == 0])):
+        v = uso_mentoria.vincular(sub, d6)
+        T[f"vinculo_seguimiento{etiqueta}"] = guardar(f"mentoria_seguimiento{etiqueta}.csv", v["resumen_seguimiento"])
+        T[f"vinculo_comparacion{etiqueta}"] = guardar(f"mentoria_comparacion{etiqueta}.csv", v["comparacion"])
+        T[f"vinculo_atendidas{etiqueta}"] = v["atendidas"]
+        T[f"vinculo_gee{etiqueta}"] = v["gee"]
     return T

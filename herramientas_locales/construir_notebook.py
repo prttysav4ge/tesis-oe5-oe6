@@ -159,17 +159,33 @@ display(T["oe6_TR"].round(3))
 """)
 
 md("""
-## 5. Uso de MentorIA en el Grupo Experimental
+## 5. MentorIA en el Grupo Experimental: uso y observaciones comunicadas
 
-Registros automáticos del sistema (conteos; no incluyen el texto de las conversaciones). La semana S9 reúne el uso
-de las semanas 8 y 9.
+**5.1 Uso por semana** (registros automáticos; la semana S9 reúne el uso de las semanas 8 y 9).
 """)
 code("""
 display(T["uso_por_semana"])
 display(Image("results/figuras/uso_mentoria_por_semana.png"))
 print("Exploratorio (solo GE, proyecto x intervalo): tasa de corrección con cambio de texto según hubo consultas")
 display(T["uso_y_correccion"].round(1)); print(T["uso_y_correccion_spearman"])
-print(uso_mentoria.plan_vinculo_recomendaciones())
+""")
+md("""
+**5.2 De la observación comunicada (b) a la corrección (c).** Cuando un estudiante pidió a MentorIA revisar su
+proyecto, el sistema calificó cada criterio de la rúbrica institucional (33 criterios, 0 a 3 puntos) y escribió una
+observación. Un criterio calificado por debajo del máximo es una **observación comunicada**. Cada observación se
+asocia a la entrega siguiente a su fecha y a la dimensión equivalente del evaluador (`MAPA_ITEMS` en
+`src/uso_mentoria.py`); luego se verifica si el evaluador registraba deficiencias en esa dimensión (a) y si se
+corrigieron con cambio de texto (c). `data/mentoria_observaciones.csv` no contiene el texto de las observaciones.
+""")
+code("""
+print("Observaciones comunicadas por intervalo (n real)")
+display(T["obs_por_intervalo"])
+print("Seguimiento de cada par proyecto-intervalo-dimensión con observación comunicada")
+display(T["vinculo_seguimiento"]); print(T["vinculo_atendidas"])
+print("Mismos proyectos y semanas: deficiencias en dimensiones con y sin observación de MentorIA")
+display(T["vinculo_comparacion"].round(1)); print("GEE:", T["vinculo_gee"])
+print("Sensibilidad sin las observaciones anteriores a la medición de la semana 4")
+display(T["vinculo_comparacion_sin_antes_S4"].round(1)); print("GEE:", T["vinculo_gee_sin_antes_S4"])
 """)
 
 md("""
